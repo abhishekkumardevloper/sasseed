@@ -11,98 +11,83 @@
       --accent:#1f9d55; --muted:#4b5960; --card:#ffffff; --bg:#f6fbf6;
       --shadow: 0 8px 28px rgba(16,24,40,0.06); --maxw:1100px;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;background:linear-gradient(180deg,#f9fdf9,#eef7ef);color:var(--muted)}
-    a{color:inherit}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;background:linear-gradient(180deg,#f9fdf9,#eef7ef);color:var(--muted);line-height:1.5}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;height:auto;display:block}
     .container{max-width:var(--maxw);margin:0 auto;padding:16px}
 
     /* Header */
-    header{position:sticky;top:0;z-index:30;background:transparent;padding:12px 0}
+    header{position:sticky;top:0;z-index:30;background:#fff;padding:12px 0;box-shadow:var(--shadow)}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .logo{display:flex;align-items:center;gap:12px}
+    .logo{display:flex;align-items:center;gap:10px}
     .logo img{width:52px;height:52px;border-radius:10px;object-fit:cover;box-shadow:var(--shadow)}
-    .logo h1{font-size:1.05rem;margin:0;color:#07381a}
-    nav ul{display:flex;gap:10px;list-style:none;padding:0;margin:0}
+    .logo h1{font-size:1.1rem;color:#07381a}
+    nav ul{display:flex;gap:12px;list-style:none}
     nav a{padding:6px 10px;border-radius:8px;font-weight:600;color:#07381a}
-    nav a:hover{background:rgba(0,0,0,0.03)}
+    nav a:hover{background:rgba(0,0,0,0.05)}
 
     /* Hero */
-    .hero{display:flex;gap:16px;align-items:center;padding:18px;border-radius:14px;background:linear-gradient(90deg, rgba(31,157,85,0.05), rgba(14,165,132,0.03));margin:12px 0}
-    .hero-left{flex:1}
-    .hero-logo{width:120px;height:120px;border-radius:12px;object-fit:cover;display:block}
-    .hero h2{margin:0 0 8px;font-size:1.6rem;color:#04481a}
-    .hero p{margin:0 0 12px;color:var(--muted);line-height:1.45}
-    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;font-weight:700;display:inline-block}
+    .hero{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:20px;border-radius:14px;background:linear-gradient(90deg, rgba(31,157,85,0.08), rgba(14,165,132,0.05));margin:16px 0;flex-wrap:wrap}
+    .hero-left{flex:1;min-width:250px}
+    .hero-logo{width:140px;height:140px;border-radius:12px;object-fit:cover;margin-bottom:12px}
+    .hero h2{font-size:1.8rem;color:#04481a;margin-bottom:10px}
+    .hero p{margin-bottom:14px;color:var(--muted)}
+    .btn{background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700;display:inline-block}
 
     /* About */
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:center;margin:18px 0}
-    .about img{width:100%;height:auto;border-radius:12px;object-fit:cover;box-shadow:var(--shadow)}
-    .about h3{margin-top:0;color:#08381a}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;margin:30px 0}
+    .about h3{color:#08381a;margin-bottom:8px}
 
     /* Products */
-    .products{margin:18px 0}
-    .products h2{margin:0 0 12px;color:#08381a}
-    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .product-card{background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow);text-align:center}
-    .product-image{
-      width:100%;
-      aspect-ratio: 3 / 2;   /* desktop card aspect */
-      border-radius:8px;
-      display:block;
-      object-fit:cover;      /* default desktop: cover for nice cards */
-      background:#f4f6f4;
-    }
-    .product-card h3{margin:10px 0 6px;color:#0b3b18;font-size:1rem}
-    .product-card p{margin:0;color:var(--muted);font-size:0.95rem}
+    .products{margin:30px 0}
+    .products h2{color:#08381a;margin-bottom:14px}
+    .product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .product-card{background:var(--card);padding:14px;border-radius:12px;box-shadow:var(--shadow);text-align:center}
+    .product-image{width:100%;aspect-ratio:3/2;border-radius:8px;object-fit:cover;background:#f4f6f4;margin-bottom:8px}
+    .product-card h3{margin:8px 0 4px;color:#0b3b18;font-size:1rem}
+    .product-card p{font-size:0.95rem;color:var(--muted)}
 
     /* Certificate */
-    .certificate{margin:18px 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-    .certificate img{width:160px;height:auto;border-radius:8px;object-fit:cover;box-shadow:var(--shadow)}
-    .view-btn{background:transparent;border:2px solid var(--accent);color:var(--accent);padding:8px 12px;border-radius:10px;font-weight:700}
+    .certificate{margin:30px 0;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+    .certificate img{width:160px;border-radius:8px;box-shadow:var(--shadow)}
+    .view-btn{background:transparent;border:2px solid var(--accent);color:var(--accent);padding:8px 12px;border-radius:10px;font-weight:700;cursor:pointer}
+    .view-btn:hover{background:var(--accent);color:#fff}
 
     /* FAQ + testimonials */
-    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
-    .faq-item{background:var(--card);padding:12px;border-radius:10px;box-shadow:var(--shadow)}
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:30px 0}
+    .faq-item{background:var(--card);padding:14px;border-radius:10px;box-shadow:var(--shadow)}
     .faq-question{display:flex;justify-content:space-between;align-items:center;cursor:pointer}
-    .faq-answer{display:none;margin-top:8px;color:var(--muted);line-height:1.45}
+    .faq-answer{display:none;margin-top:8px;color:var(--muted)}
 
-    .testimonials{margin:12px 0}
-    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .testi{background:var(--card);padding:12px;border-radius:10px;box-shadow:var(--shadow)}
+    .testimonials{margin:30px 0}
+    .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .testi{background:var(--card);padding:14px;border-radius:10px;box-shadow:var(--shadow)}
 
     /* Contact */
-    .contact{margin:18px 0;background:linear-gradient(180deg,#fff,#f6fff6);padding:12px;border-radius:12px}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6efe6;background:#fbfff8}
-    .contact-form button{background:var(--accent);color:#fff;padding:10px;border-radius:8px;border:0;font-weight:700}
+    .contact{margin:30px 0;background:linear-gradient(180deg,#fff,#f6fff6);padding:16px;border-radius:12px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6efe6;background:#fbfff8;margin-bottom:10px}
+    .contact-form button{background:var(--accent);color:#fff;padding:10px;border-radius:8px;border:0;font-weight:700;cursor:pointer}
 
     /* Footer */
-    footer{margin-top:18px;text-align:center;color:var(--muted);padding:16px 0}
+    footer{text-align:center;color:var(--muted);padding:20px 0;margin-top:20px;background:#fff;box-shadow:var(--shadow)}
 
     /* Popup */
     .popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);align-items:center;justify-content:center;padding:16px;z-index:9999}
     .popup img{max-width:100%;max-height:92vh;border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,0.5)}
     .popup .close{position:absolute;top:16px;right:16px;background:#fff;border-radius:999px;padding:6px 8px;cursor:pointer;border:0}
 
-    /* Helpers */
-    .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-
     /* Responsive */
-    @media (max-width:1000px){
-      .product-grid{grid-template-columns:repeat(2,1fr)}
-      .testi-grid{grid-template-columns:repeat(2,1fr)}
-      .about{grid-template-columns:1fr}
-    }
-    @media (max-width:600px){
+    @media (max-width:768px){
       nav ul{display:none}
-      .hero{flex-direction:column;align-items:flex-start}
-      .hero-logo{width:96px;height:96px}
-      .product-grid{grid-template-columns:1fr}
-      .testi-grid{grid-template-columns:1fr}
+      .hero{flex-direction:column;text-align:left}
+      .hero-logo{width:100px;height:100px}
+      .about{grid-template-columns:1fr}
       .faq-grid{grid-template-columns:1fr}
       .contact-grid{grid-template-columns:1fr}
-      /* On phones show the full image (no cropping) */
-      .product-image{aspect-ratio:auto;height:auto;object-fit:contain;background:#fff}
+      .certificate{flex-direction:column;align-items:flex-start}
+      .product-image{aspect-ratio:auto;object-fit:contain;background:#fff}
     }
   </style>
 </head>
@@ -110,11 +95,10 @@
   <header>
     <div class="container nav">
       <div class="logo">
-        <!-- using your provided logo image -->
-        <img src="images/IMG-20251031-WA0009.jpg" alt="Sasha Seeds logo" loading="lazy" width="52" height="52" onerror="this.onerror=null;this.src='images/IMG-20251031-WA0009.jpg'">
+        <img src="images/IMG-20251031-WA0009.jpg" alt="Sasha Seeds logo">
         <h1>Sasha Seeds</h1>
       </div>
-      <nav aria-label="Primary">
+      <nav>
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#products">Products</a></li>
@@ -127,197 +111,119 @@
 
   <main class="container">
     <!-- HERO -->
-    <section id="home" class="hero" aria-labelledby="hero-heading">
+    <section id="home" class="hero">
       <div class="hero-left">
-        <!-- hero image using your provided image -->
-       <img class="hero-logo"
-     src="images/IMG-20251031-WA0009.jpg"
-     srcset="images/IMG-20251031-WA0009.jpg 600w,
-             images/IMG-20251031-WA0009@2x.jpg 1200w"
-     sizes="(max-width:600px) 96px, 120px"
-     alt="Sasha Seeds logo"
-     loading="lazy"
-     decoding="async"
-     width="120" height="120"
-     onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22120%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%231f9d55%22/><text x=%2250%25%22 y=%2255%25%22 font-size=%2220%22 font-family=%22Arial%22 fill=%22white%22 text-anchor=%22middle%22>Logo</text></svg>';">
-
-        <h2 id="hero-heading">Growing the Future with <span style="color:var(--accent)">Quality Seeds</span></h2>
+        <img class="hero-logo" src="images/IMG-20251031-WA0009.jpg" alt="Sasha Seeds logo">
+        <h2>Growing the Future with <span style="color:var(--accent)">Quality Seeds</span></h2>
         <p>Premium seed varieties, farmer-first support, and ISO-certified quality to help maximize yields and income.</p>
         <a class="btn" href="#products">Explore Products</a>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section class="about" aria-labelledby="about-heading">
+    <section class="about">
       <div>
-        <h3 id="about-heading">About Sasha Seeds</h3>
-        <p><strong>Sasha Seeds</strong> is a farmer-first agricultural company dedicated to innovation, sustainability, and providing high-quality seeds across India. We partner with growers to deliver research-driven seed solutions that improve productivity. Our services include field support, seed-quality testing, and agronomy guidance.</p>
+        <h3>About Sasha Seeds</h3>
+        <p><strong>Sasha Seeds</strong> is a farmer-first agricultural company dedicated to innovation, sustainability, and providing high-quality seeds across India. We partner with growers to deliver research-driven seed solutions that improve productivity and profitability.</p>
       </div>
-      <div>
-        <!-- using your provided farmer image -->
-        <img src="images/farmer.jpg" alt="Farmer in field" loading="lazy" width="800" height="533" onerror="this.onerror=null;this.src='images/farmer.jpg'">
-      </div>
+      <img src="images/farmer.jpg" alt="Farmer in field">
     </section>
 
     <!-- PRODUCTS -->
-    <section id="products" class="products" aria-labelledby="products-heading">
-      <h2 id="products-heading">Our Products</h2>
+    <section id="products" class="products">
+      <h2>Our Products</h2>
       <div class="product-grid">
-        <!-- White Hybrid Maize -->
-        <article class="product-card" aria-label="White Hybrid Maize">
-          <img class="product-image"
-               src="images/white.jpg"
-               alt="White hybrid maize seeds"
-               loading="lazy"
-               decoding="async"
-               onerror="this.onerror=null;this.src='images/whitehybridemaize.jpg'">
+        <article class="product-card">
+          <img class="product-image" src="images/whitehybridemaize.jpg" alt="White hybrid maize">
           <h3>White Hybrid Maize</h3>
-          <p>High-yielding white hybrid maize variety for diverse agro-climatic zones.</p>
-        <!-- F1 Hybrid Watermelon -->
-        <article class="product-card" aria-label="F1 Hybrid Watermelon">
-          <img class="product-image"
-               src="images/watermelon.jpg"
-               alt="F1 Hybrid Watermelon seeds"
-               loading="lazy"
-               decoding="async"
-               onerror="this.onerror=null;this.src='images/watermelon.jpg'">
+          <p>High-yielding maize variety for diverse climates.</p>
+        </article>
+
+        <article class="product-card">
+          <img class="product-image" src="images/watermelon.jpg" alt="F1 Hybrid Watermelon">
           <h3>F1 Hybrid Watermelon</h3>
-          <p>Juicy, disease-resistant watermelon variety for commercial and kitchen gardens.</p>
+          <p>Juicy, disease-resistant watermelon seeds.</p>
         </article>
 
-        <!-- Tomatoes -->
-        <article class="product-card" aria-label="Tomatoes">
-          <img class="product-image"
-               src="images/tomato.jpg"
-               alt="Tomato seeds"
-               loading="lazy"
-               decoding="async"
-               onerror="this.onerror=null;this.src='images/tomato.jpg'">
+        <article class="product-card">
+          <img class="product-image" src="images/tomato.jpg" alt="Tomatoes">
           <h3>Tomatoes</h3>
-          <p>Flavorful tomato seeds suited to small farms and backyard growers.</p>
+          <p>Flavorful tomato seeds suited to all growers.</p>
         </article>
 
-        <!-- Bottle Gourd -->
-        <article class="product-card" aria-label="Bottle Gourd">
-          <img class="product-image"
-               src="images/kaddu.jpg"
-               alt="Bottle gourd seeds"
-               loading="lazy"
-               decoding="async"
-               onerror="this.onerror=null;this.src='images/kaddu.jpg'">
+        <article class="product-card">
+          <img class="product-image" src="images/kaddu.jpg" alt="Bottle Gourd">
           <h3>Bottle Gourd</h3>
-          <p>Tender, high-yield bottle gourd variety for fresh markets.</p>
+          <p>Tender, high-yield variety for markets.</p>
         </article>
 
-        <!-- Wheat Seeds -->
-        <article class="product-card" aria-label="Wheat Seeds">
-          <img class="product-image"
-               src="images/wheat.jpg"
-               alt="Wheat seeds"
-               loading="lazy"
-               decoding="async"
-               onerror="this.onerror=null;this.src='images/wheat.jpg'">
+        <article class="product-card">
+          <img class="product-image" src="images/wheat.jpg" alt="Wheat">
           <h3>Wheat Seeds</h3>
-          <p>Resilient wheat seeds for strong tillering and golden harvests.</p>
+          <p>Resilient wheat for golden harvests.</p>
         </article>
 
-        <!-- Okra (Lady Finger) -->
-        <article class="product-card" aria-label="Okra (Lady Finger)">
-          <img class="product-image"
-               src="images/vindi.jpg"
-               alt="Okra seeds"
-               loading="lazy"
-               decoding="async"
-               onerror="this.onerror=null;this.src='images/vindi.jpg'">
+        <article class="product-card">
+          <img class="product-image" src="images/vindi.jpg" alt="Okra">
           <h3>Okra (Lady Finger)</h3>
-          <p>High-quality okra seeds for tender, nutritious harvests.</p>
-        </article>
-
-        <!-- Bitter Gourd -->
-        <article class="product-card" aria-label="Bitter Gourd">
-          <img class="product-image"
-               src="images/karela.jpg"
-               alt="Bitter gourd seeds"
-               loading="lazy"
-               decoding="async"
-               onerror="this.onerror=null;this.src='images/karela.jpg'">
-          <h3>Bitter Gourd</h3>
-          <p>Nutritious bitter gourd variety for health-conscious markets.</p>
-        </article>
-
-        <!-- F1 Hybrid Sponge Gourd -->
-        <article class="product-card" aria-label="F1 Hybrid Sponge Gourd">
-          <img class="product-image"
-               src="images/sponge.jpg"
-               alt="Sponge gourd seeds"
-               loading="lazy"
-               decoding="async"
-               onerror="this.onerror=null;this.src='images/sponge.jpg'">
-          <h3>F1 Hybrid Sponge Gourd</h3>
-          <p>Premium sponge gourd seeds delivering consistent, tender fruits.</p>
-        </article>
-
-        <!-- Hybrid Maize -->
-        <article class="product-card" aria-label="Hybrid Maize">
-          <img class="product-image"
-               src="images/hybrid.jpg"
-               alt="Hybrid maize seeds"
-               loading="lazy"
-               decoding="async"
-               onerror="this.onerror=null;this.src='images/hybrid.jpg'">
-          <h3>Hybrid Maize</h3>
-          <p>High-performance hybrid maize for maximum yield and grain quality.</p>
+          <p>High-quality okra for nutritious harvests.</p>
         </article>
       </div>
     </section>
 
     <!-- Certificate -->
-    <section class="certificate" aria-labelledby="cert-heading">
+    <section class="certificate">
       <div>
-        <h2 id="cert-heading">Our Certificate</h2>
+        <h2>Our Certificate</h2>
         <p><strong>ISO Certified Company</strong> — Ensuring quality & trust in every seed.</p>
         <button class="view-btn" id="open-cert">View Certificate</button>
       </div>
-      <div>
-        <!-- your certificate image -->
-        <img id="cert-thumb" src="images/IMG_20251102_172355.jpg" alt="ISO certificate" loading="lazy" width="160" height="110" onerror="this.onerror=null;this.src='images/IMG_20251102_172355.jpg'">
-      </div>
+      <img id="cert-thumb" src="images/IMG_20251102_172355.jpg" alt="ISO certificate">
     </section>
 
     <!-- FAQ -->
-    <section id="faq" aria-labelledby="faq-heading">
-      <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
       <div class="faq-grid">
         <div class="faq-item">
-          <div class="faq-question"><strong>How do I choose the right seed variety?</strong><span class="sr-only">toggle</span></div>
-          <div class="faq-answer">Choose based on local climate, soil type and intended market. Contact our agronomy team for a tailored recommendation.</div>
+          <div class="faq-question"><strong>How do I choose the right seed?</strong></div>
+          <div class="faq-answer">Choose based on local climate, soil, and market needs. Contact us for expert help.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-question"><strong>Do you provide agronomic support?</strong><span class="sr-only">toggle</span></div>
-          <div class="faq-answer">Yes — we provide pre- and post-sale guidance, seed treatment advice and where possible on-field visits.</div>
+          <div class="faq-question"><strong>Do you provide agronomic support?</strong></div>
+          <div class="faq-answer">Yes — we provide pre- and post-sale guidance and field visits.</div>
         </div>
       </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials" aria-labelledby="testi-heading">
-      <h2 id="testi-heading">What Farmers Say</h2>
+    <section class="testimonials">
+      <h2>What Farmers Say</h2>
       <div class="testi-grid">
-        <div class="testi"><strong>Ramesh, Telangana</strong><p>"Sasha Seeds' hybrid maize gave me a 25% higher yield compared to last year."</p></div>
-        <div class="testi"><strong>Priya, Maharashtra</strong><p>"Great support and fast delivery. The watermelon variety performed exceptionally."</p></div>
-        <div class="testi"><strong>Vikram, Karnataka</strong><p>"Seed quality is consistent. Their team helped with planting schedules and pest advice."</p></div>
+        <div class="testi"><strong>Ramesh, Telangana</strong><p>"Hybrid maize gave me 25% higher yield!"</p></div>
+        <div class="testi"><strong>Priya, Maharashtra</strong><p>"Great support and quality seeds."</p></div>
+        <div class="testi"><strong>Vikram, Karnataka</strong><p>"Team helped me with planting schedules."</p></div>
       </div>
     </section>
 
-   
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-grid">
+        <div>
+          <p><strong>Email:</strong> <a href="mailto:sashaseed@rediffmail.com">sashaseed@rediffmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+919866865381">+91 9866865381</a></p>
+          <p><strong>Office:</strong> H.no:739/81, Plot No:81, Trimula Colony, Shamirpet, Hyderabad - 500078</p>
+        </div>
 
+        
+      </div>
+    </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>🌿 © Sasha Seeds 2025 | All Rights Reserved 🌿</p>
-      <small>Growing the Future with Quality Seeds</small>
-    </div>
+    <p>🌿 © Sasha Seeds 2025 | All Rights Reserved 🌿</p>
+    <small>Growing the Future with Quality Seeds</small>
   </footer>
 
   <!-- Certificate popup -->
@@ -328,59 +234,33 @@
 
   <script>
     // Certificate popup
-    (function(){
-      const openBtn = document.getElementById('open-cert');
-      const popup = document.getElementById('cert-popup');
-      const closeBtn = document.getElementById('close-popup');
-      const thumb = document.getElementById('cert-thumb');
-      const full = document.getElementById('cert-full');
-
-      if(openBtn && popup && closeBtn && thumb && full){
-        openBtn.addEventListener('click', () => {
-          full.src = thumb.src;
-          popup.style.display = 'flex';
-          popup.setAttribute('aria-hidden','false');
-          document.body.style.overflow = 'hidden';
-        });
-        closeBtn.addEventListener('click', () => {
-          popup.style.display = 'none';
-          popup.setAttribute('aria-hidden','true');
-          document.body.style.overflow = '';
-          full.src = '';
-        });
-        popup.addEventListener('click', (e) => { if(e.target === popup) closeBtn.click(); });
-        document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeBtn.click(); });
-      }
-    })();
+    const openBtn=document.getElementById('open-cert');
+    const popup=document.getElementById('cert-popup');
+    const closeBtn=document.getElementById('close-popup');
+    const thumb=document.getElementById('cert-thumb');
+    const full=document.getElementById('cert-full');
+    openBtn.onclick=()=>{full.src=thumb.src;popup.style.display='flex';document.body.style.overflow='hidden'};
+    closeBtn.onclick=()=>{popup.style.display='none';document.body.style.overflow='auto'};
+    popup.onclick=(e)=>{if(e.target===popup)closeBtn.click()};
 
     // FAQ accordion
-    (function(){
-      document.querySelectorAll('.faq-item').forEach(item=>{
-        const q = item.querySelector('.faq-question');
-        const a = item.querySelector('.faq-answer');
-        q.addEventListener('click', ()=>{
-          const open = a.style.display === 'block';
-          // close others
-          document.querySelectorAll('.faq-answer').forEach(n=>n.style.display='none');
-          a.style.display = open ? 'none' : 'block';
-        });
-      });
-    })();
+    document.querySelectorAll('.faq-question').forEach(q=>{
+      q.onclick=()=>{
+        const ans=q.nextElementSibling;
+        ans.style.display=ans.style.display==='block'?'none':'block';
+      };
+    });
 
     // Contact form demo handler
-    (function(){
-      const form = document.getElementById('contact-form');
-      const feedback = document.getElementById('form-feedback');
-      if(form){
-        form.addEventListener('submit', (e) => {
-          e.preventDefault();
-          feedback.style.display = 'block';
-          feedback.textContent = 'Thanks! Your message has been received. We will contact you soon.';
-          form.reset();
-          setTimeout(()=> feedback.style.display='none', 5000);
-        });
-      }
-    })();
+    const form=document.getElementById('contact-form');
+    const feedback=document.getElementById('form-feedback');
+    form.onsubmit=(e)=>{
+      e.preventDefault();
+      feedback.style.display='block';
+      feedback.textContent='Thanks! Your message has been received.';
+      form.reset();
+      setTimeout(()=>feedback.style.display='none',4000);
+    };
   </script>
 </body>
 </html>
