@@ -2,106 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sasha Seeds — Growing the Future</title>
-  <meta name="description" content="Sasha Seeds — premium seeds for farmers across India. Quality, sustainability and support." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sasha Seeds — Quality Seeds for Growing Futures</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Sasha Seeds — premium seed varieties, farmer-first service, ISO-certified quality." />
+
   <style>
     :root{
-      --bg: #0b1220;
-      --card: #0f1724;
-      --muted: #9fb0c8;
-      --text: #e8f0f8;
-      --accent: #4fd1c5; /* teal */
-      --accent-2: #7c3aed; /* purple */
-      --glass: rgba(255,255,255,0.04);
-      --radius: 12px;
-      --container: 1100px;
+      --bg: #f6fbf6;
+      --card: #ffffff;
+      --muted: #52606d;
+      --accent: #1f9d55; /* green */
+      --accent-2: #0ea5a4; /* teal */
+      --glass: rgba(15, 23, 42, 0.03);
+      --radius: 14px;
+      --max-width: 1100px;
+      --shadow: 0 6px 20px rgba(16,24,40,0.08);
     }
+
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial; background:linear-gradient(180deg,#071025 0%, #07131f 100%);color:var(--text);-webkit-font-smoothing:antialiased}
-    a{color:inherit}
-    .container{max-width:var(--container);margin:0 auto;padding:1.25rem}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:var(--muted);background:linear-gradient(180deg,#f9fdf9 0%, #eef7ef 100%)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{max-width:var(--max-width);margin:0 auto;padding:2rem}
 
     /* Header */
-    header.navbar{position:sticky;top:0;z-index:60;background:linear-gradient(90deg, rgba(7,10,18,0.6), rgba(7,10,18,0.3));backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,0.04)}
+    header.navbar{background:transparent;padding:0.75rem 0;position:sticky;top:0;z-index:50}
     .nav-container{display:flex;align-items:center;justify-content:space-between;gap:1rem}
-    .logo{display:flex;align-items:center;gap:.75rem}
-    .logo img{width:52px;height:52px;border-radius:8px;object-fit:cover;border:1px solid rgba(255,255,255,0.06)}
-    .logo h1{font-size:1.05rem;margin:0;font-weight:700;letter-spacing:0.2px}
+    .logo{display:flex;align-items:center;gap:0.75rem}
+    .logo img{width:56px;height:56px;border-radius:10px;object-fit:cover;box-shadow:var(--shadow)}
+    .logo h1{font-size:1.125rem;margin:0;color:#0b3b18}
 
-    nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
-    nav a{padding:.5rem .75rem;border-radius:8px;color:var(--muted);font-weight:600;font-size:.95rem}
-    nav a:hover{color:var(--text);background:linear-gradient(90deg, rgba(79,209,197,0.06), rgba(124,58,237,0.04))}
-
-    /* Mobile nav */
-    .mobile-toggle{display:none;background:transparent;border:1px solid rgba(255,255,255,0.04);padding:.4rem;border-radius:8px}
+    nav ul{display:flex;gap:1rem;align-items:center;margin:0;padding:0;list-style:none}
+    nav a{padding:0.5rem 0.75rem;border-radius:8px;color:#0b3b18;font-weight:600}
+    nav a:hover{background:var(--glass)}
 
     /* Hero */
-    .hero{padding:4rem 0;text-align:center}
-    .hero .hero-inner{display:grid;grid-template-columns:1fr;gap:1.25rem;align-items:center}
-    .hero-logo{width:110px;height:110px;border-radius:14px;object-fit:cover;border:2px solid rgba(255,255,255,0.04);margin:0 auto}
-    .hero h2{font-size:2rem;margin:.5rem 0 0;font-weight:700}
-    .hero h2 span{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .hero p{color:var(--muted);margin:.75rem 0 1.25rem;font-size:1rem}
-    .btn{display:inline-block;padding:.65rem 1.1rem;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#06202a;font-weight:700;text-decoration:none}
-
-    /* Sections */
-    section{padding:2.25rem 0}
-    h2.section-title{font-size:1.5rem;margin:0 0 1rem}
+    .hero{background:linear-gradient(90deg, rgba(31,157,85,0.06), rgba(14,165,132,0.04));padding:3rem;border-radius:18px;margin:1rem 0}
+    .hero-content{display:flex;gap:2rem;align-items:center}
+    .hero-left{flex:1}
+    .hero-logo{width:120px;height:120px;border-radius:12px;object-fit:cover;border:3px solid rgba(15, 157, 85, 0.08)}
+    .hero h2{font-size:1.8rem;margin:0 0 0.5rem;color:#04481a}
+    .hero h2 span{color:var(--accent);}
+    .hero p{margin:0 0 1rem;color:var(--muted);line-height:1.5}
+    .btn{display:inline-block;background:var(--accent);color:white;padding:0.75rem 1rem;border-radius:10px;font-weight:700;box-shadow:rgba(31,157,85,0.18) 0 8px 20px;}
+    .btn:hover{transform:translateY(-2px);transition:all .18s ease}
 
     /* About */
+    .about-section{padding:2rem 0}
     .about-container{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center}
-    .about-img img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
+    .about-img img{border-radius:14px;box-shadow:var(--shadow);width:100%;height:100%;object-fit:cover}
+    .about-text h2{margin-top:0;color:#08381a}
     .about-text p{color:var(--muted);line-height:1.6}
-    .mission-vision{display:flex;gap:1rem;margin:1rem 0}
-    .mv-box{background:var(--glass);padding:1rem;border-radius:10px;flex:1;border:1px solid rgba(255,255,255,0.03)}
-    .mv-icon{font-size:1.5rem}
-    .about-btn{display:inline-block;margin-top:0.75rem;padding:.5rem .9rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text);font-weight:600}
 
-    /* Products grid */
-    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-    .product-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.04);text-align:center}
-    .product-card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
-    .product-card h3{margin:.6rem 0 0;font-size:1rem}
-    .product-card p{color:var(--muted);font-size:.95rem}
+    .mission-vision{display:flex;gap:1rem;margin:1rem 0}
+    .mv-box{background:linear-gradient(180deg,#ffffff,#f6fbf6);padding:1rem;border-radius:12px;flex:1;box-shadow:0 6px 14px rgba(12, 58, 34, 0.06)}
+    .mv-icon{font-size:1.5rem}
+    .about-btn{display:inline-block;margin-top:0.5rem;padding:0.6rem 0.9rem;border-radius:10px;background:transparent;border:2px solid var(--accent);color:var(--accent);font-weight:700}
+
+    /* Products */
+    #products{padding:2rem 0}
+    #products h2{color:#08381a}
+    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+    .product-card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:var(--shadow);text-align:center}
+    .product-image{width:100%;height:160px;border-radius:8px;object-fit:cover;display:block}
+    .product-card h3{margin:.6rem 0 0.4rem;color:#0b3b18}
+    .product-card p{font-size:0.95rem;color:var(--muted)}
 
     /* Certificate */
-    .certificate-container{display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap}
-    .certificate-content{display:flex;gap:1rem;align-items:center}
-    .certificate-content img{width:140px;height:100px;object-fit:cover;border-radius:8px;border:1px solid rgba(255,255,255,0.04)}
-    .view-btn{padding:.5rem .8rem;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:#06202a;font-weight:700}
+    .certificate-section{padding:2rem 0}
+    .certificate-container{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
+    .certificate-content{background:var(--card);padding:1rem;border-radius:12px;box-shadow:var(--shadow);display:flex;gap:1rem;align-items:center}
+    .certificate-content img{width:160px;height:110px;object-fit:cover;border-radius:8px}
+    .view-btn{background:transparent;border:2px solid var(--accent-2);color:var(--accent-2);padding:0.5rem 0.9rem;border-radius:10px;font-weight:700}
 
-    /* Modal */
-    .modal{display:none;position:fixed;inset:0;background:rgba(3,6,12,0.7);align-items:center;justify-content:center;padding:1rem}
-    .modal .modal-inner{max-width:900px;width:100%;background:var(--card);padding:1rem;border-radius:12px}
-    .modal img{width:100%;height:auto;border-radius:8px}
-    .modal .close-btn{display:inline-block;margin-top:.5rem;padding:.35rem .6rem;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.06);cursor:pointer}
+    /* FAQ */
+    .faq-section{padding:2rem 0}
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .faq-item{background:var(--card);padding:1rem;border-radius:12px;box-shadow:var(--shadow)}
+    .faq-question{cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+    .faq-answer{margin-top:.6rem;display:none;color:var(--muted);line-height:1.5}
+
+    /* Testimonials */
+    .testimonials{padding:2rem 0}
+    .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .testimonial{background:var(--card);padding:1rem;border-radius:12px;box-shadow:var(--shadow)}
 
     /* Contact */
-    .contact-section{position:relative;padding:2.5rem 0}
-    .contact-logo{position:absolute;right:1.25rem;top:-32px;width:64px;height:64px;border-radius:10px;object-fit:cover;border:1px solid rgba(255,255,255,0.04)}
-    .contact-container{display:grid;grid-template-columns:1fr 1fr;gap:1rem;background:linear-gradient(180deg, rgba(255,255,255,0.01),transparent);padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    .contact-info p{margin:.35rem 0;color:var(--muted)}
+    .contact-section{padding:2rem 0;background:linear-gradient(180deg,#ffffff,#f8fff8);border-radius:12px;margin:1rem 0}
+    .contact-container{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start}
+    .contact-info p{margin:.35rem 0}
     .contact-form{display:flex;flex-direction:column;gap:.6rem}
-    .contact-form input,.contact-form textarea{padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
-    .contact-form button{padding:.6rem .9rem;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;font-weight:700;color:#06202a}
+    .contact-form input,.contact-form textarea{padding:.75rem;border-radius:10px;border:1px solid #e6efe6;background:#fbfff8}
+    .contact-form button{background:var(--accent);color:white;padding:.75rem;border-radius:10px;border:0;font-weight:700}
 
     /* Footer */
-    footer.footer{padding:1rem 0;margin-top:1.5rem;border-top:1px solid rgba(255,255,255,0.03);text-align:center;color:var(--muted)}
+    footer.footer{padding:1rem 0;text-align:center;color:var(--muted);margin-top:1rem}
 
     /* Responsive */
     @media (max-width:900px){
       .about-container{grid-template-columns:1fr}
       .product-grid{grid-template-columns:repeat(2,1fr)}
       .contact-container{grid-template-columns:1fr}
-      nav ul{display:none}
-      .mobile-toggle{display:inline-flex}
+      .hero-content{flex-direction:column;align-items:flex-start}
+      .faq-grid{grid-template-columns:1fr}
+      .testimonials-grid{grid-template-columns:1fr}
     }
-    @media (max-width:600px){
+    @media (max-width:520px){
+      nav ul{display:none}
       .product-grid{grid-template-columns:1fr}
-      .hero h2{font-size:1.45rem}
-      .logo h1{font-size:.95rem}
+      .logo h1{font-size:1rem}
     }
   </style>
 </head>
@@ -109,52 +120,69 @@
   <header class="navbar">
     <div class="container nav-container">
       <div class="logo">
-        <img src="images/IMG-20251031-WA0009.jpg" alt="Sasha Seeds logo">
+        <img src="images/IMG-20251031-WA0009.jpg" alt="Sasha Seeds Logo" loading="lazy" width="56" height="56" />
         <h1>Sasha Seeds</h1>
       </div>
-
-      <nav aria-label="Primary" id="main-nav">
-        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="menu">☰</button>
-        <ul id="menu">
+      <nav aria-label="Primary navigation">
+        <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#products">Products</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-inner">
-        <img src="images/IMG-20251031-WA0009.jpg" alt="Sasha Seeds" class="hero-logo">
-        <h2>Growing the Future with <span>Quality Seeds</span></h2>
-        <p>Premium seeds and farmer support — trusted across India for higher yields and sustainability.</p>
-        <a href="#products" class="btn" aria-label="Explore products">Explore Products</a>
+  <main class="container">
+    <!-- Hero -->
+    <section id="home" class="hero" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <div class="hero-left">
+            <img
+  src="images/IMG-20251031-WA0009.jpg"
+  srcset="images/IMG-20251031-WA0009.jpg 600w,
+          images/IMG-20251031-WA0009@2x.jpg 1200w"
+  sizes="(max-width:600px) 96px, 120px"
+  alt="Sasha Seeds logo"
+  class="hero-logo"
+  loading="lazy"
+  width="120"
+  height="120"
+  onerror="this.onerror=null; this.src='images/placeholder.jpg'; console.warn('Hero image failed to load:', this.src);"
+/>
+
+          <p>Premium seed varieties, farmer-first support, and ISO-certified quality to help maximize yields and income.</p>
+          <a href="#products" class="btn">Explore Products</a>
+        </div>
       </div>
     </section>
 
-    <section id="about" class="about-section">
-      <div class="container about-container">
+    <!-- About -->
+    <section id="about" class="about-section" aria-labelledby="about-heading">
+      <div class="about-container">
         <div class="about-img">
-          <img src="images/farmer.jpg" alt="Farmer with crops">
+          <img src="images/farmer.jpg"
+               alt="Farmer in a field"
+               loading="lazy"
+               width="800" height="533">
         </div>
         <div class="about-text">
-          <h2 class="section-title">About Us</h2>
-          <p><strong>Sasha Seeds</strong> is dedicated to innovation, sustainability and supplying high-quality seeds for farmers across India. We combine research-driven seed varieties with on-ground support to boost productivity and resilience.</p>
-          <p class="muted">Our team partners with growers to provide seed selection advice, crop management tips and post-sale support — because great seeds deserve great service.</p>
+          <h2 id="about-heading">About Us</h2>
+          <p><strong>Sasha Seeds</strong> is a farmer-first agricultural company dedicated to innovation, sustainability, and providing high-quality seeds across India. We partner with growers to deliver research-driven seed solutions that improve productivity.</p>
+          <p>Our programs include field support, seed quality training, and post-sale agronomic advice — because great seeds need great care too.</p>
 
-          <div class="mission-vision">
-            <div class="mv-box">
-              <div class="mv-icon">🎯</div>
+          <div class="mission-vision" role="list">
+            <div class="mv-box" role="listitem">
+              <div class="mv-icon" aria-hidden>🎯</div>
               <h3>Our Mission</h3>
-              <p>Provide reliable seeds and knowledge that increase productivity and promote sustainable agriculture for future generations.</p>
+              <p>Provide reliable, high-performing seeds that increase farmer incomes and promote sustainable farming.</p>
             </div>
-            <div class="mv-box">
-              <div class="mv-icon">👁️</div>
+            <div class="mv-box" role="listitem">
+              <div class="mv-icon" aria-hidden>👁️</div>
               <h3>Our Vision</h3>
-              <p>To be India’s most trusted seed brand — empowering every farmer to harvest success.</p>
+              <p>To be India’s trusted seed partner — innovation-led, quality-driven, and farmer-focused.</p>
             </div>
           </div>
 
@@ -163,180 +191,232 @@
       </div>
     </section>
 
-    <section id="products">
-      <div class="container">
-        <h2 class="section-title">Our Products</h2>
-        <div class="product-grid" role="list">
+    <!-- Products -->
+    <section id="products" aria-labelledby="products-heading">
+      <h2 id="products-heading">Our Products</h2>
+      <div class="product-grid">
 
-          <!-- Product (repeatable) -->
-          <article class="product-card" role="listitem">
-            <img src="images/whitehybridemaize.jpg" alt="White Hybrid Maize">
-            <h3>White Hybrid Maize</h3>
-            <p>High-yield hybrid maize designed for strong stalks and excellent grain quality.</p>
-          </article>
+        <!-- Product card (repeatable) -->
+        <article class="product-card" aria-label="White Hybrid Maize">
+  <figure>
+    <img
+      class="product-image"
+      src="images/whitehybridemaize.jpg"
+      srcset="images/whitehybridemaize.jpg 600w,
+              images/whitehybridemaize@2x.jpg 1200w"
+      sizes="(max-width:600px) 100vw, 33vw"
+      alt="White Hybrid Maize seeds — hybrid variety"
+      width="600"
+      height="400"
+      loading="lazy"
+      decoding="async"
+      onerror="this.onerror=null; this.src='images/placeholder.jpg'; console.warn('Image failed:', this.src);"
+    />
+    <figcaption class="sr-only">White Hybrid Maize — high yield hybrid maize seeds</figcaption>
+  </figure>
 
-          <article class="product-card" role="listitem">
-            <img src="images/watermelon.jpg" alt="F1 Hybrid Watermelon">
-            <h3>F1 Hybrid Watermelon</h3>
-            <p>Juicy, uniform fruits with excellent shelf life and taste—perfect for commercial growers.</p>
-          </article>
+  <h3>White Hybrid Maize</h3>
+  <p>High-yield hybrid maize variety developed for strong performance and grain quality.</p>
+</article>
 
-          <article class="product-card" role="listitem">
-            <img src="images/tomato.jpg" alt="Tomato Seeds">
-            <h3>Tomato Seeds</h3>
-            <p>High-quality tomato varieties for home gardens and commercial production.</p>
-          </article>
 
-          <article class="product-card" role="listitem">
-            <img src="images/kaddu.jpg" alt="Bottle Gourd">
-            <h3>Bottle Gourd</h3>
-            <p>Tender, high-yield bottle gourd seeds with reliable germination rates.</p>
-          </article>
+        <article class="product-card" aria-label="F1 Hybrid Watermelon">
+          <img class="product-image" src="images/watermelon.jpg" alt="F1 Hybrid Watermelon seeds" loading="lazy" width="600" height="400">
+          <h3>F1 Hybrid Watermelon</h3>
+          <p>Juicy, disease-resistant watermelon variety for commercial and kitchen gardens.</p>
+        </article>
 
-          <article class="product-card" role="listitem">
-            <img src="images/wheat.jpg" alt="Wheat Seeds">
-            <h3>Wheat Seeds</h3>
-            <p>Proven wheat varieties for strong growth and a golden harvest.</p>
-          </article>
+        <article class="product-card" aria-label="Tomato seeds">
+          <img class="product-image" src="images/tomato.jpg" alt="Tomato seeds" loading="lazy" width="600" height="400">
+          <h3>Tomatoes</h3>
+          <p>Flavorful tomato seeds suited to small farms and backyard growers.</p>
+        </article>
 
-          <article class="product-card" role="listitem">
-            <img src="images/vindi.jpg" alt="Okra (Bhendi)">
-            <h3>Okra (Bhendi)</h3>
-            <p>High-quality okra seeds producing tender, nutritious, high-yield pods.</p>
-          </article>
+        <article class="product-card" aria-label="Bottle Gourd seeds">
+          <img class="product-image" src="images/kaddu.jpg" alt="Bottle gourd seeds" loading="lazy" width="600" height="400">
+          <h3>Bottle Gourd</h3>
+          <p>Tender, high-yield bottle gourd variety for fresh markets.</p>
+        </article>
 
-          <article class="product-card" role="listitem">
-            <img src="images/karela.jpg" alt="Bitter Gourd">
-            <h3>Bitter Gourd</h3>
-            <p>Nutritious bitter gourd varieties suited to diverse climates.</p>
-          </article>
+        <article class="product-card" aria-label="Wheat seeds">
+          <img class="product-image" src="images/wheat.jpg" alt="Wheat seeds" loading="lazy" width="600" height="400">
+          <h3>Wheat Seeds</h3>
+          <p>Resilient wheat seeds for strong tillering and golden harvests.</p>
+        </article>
 
-          <article class="product-card" role="listitem">
-            <img src="images/sponge.jpg" alt="F1 Hybrid Sponge Gourd">
-            <h3>F1 Hybrid Sponge Gourd</h3>
-            <p>Premium sponge gourd seeds for consistent, high-quality harvests.</p>
-          </article>
+        <article class="product-card" aria-label="Okra seeds">
+          <img class="product-image" src="images/vindi.jpg" alt="Okra seeds" loading="lazy" width="600" height="400">
+          <h3>Okra (Lady Finger)</h3>
+          <p>High-quality okra seeds for tender, nutritious harvests.</p>
+        </article>
 
-          <article class="product-card" role="listitem">
-            <img src="images/hybrid.jpg" alt="Hybrid Maize">
-            <h3>Hybrid Maize</h3>
-            <p>Robust hybrid maize for maximum yield and grain quality.</p>
-          </article>
+        <article class="product-card" aria-label="Bitter gourd seeds">
+          <img class="product-image" src="images/karela.jpg" alt="Bitter gourd seeds" loading="lazy" width="600" height="400">
+          <h3>Bitter Gourd</h3>
+          <p>Nutritious bitter gourd variety for health-conscious markets.</p>
+        </article>
 
-        </div>
+        <article class="product-card" aria-label="Sponge gourd seeds">
+          <img class="product-image" src="images/sponge.jpg" alt="Sponge gourd seeds" loading="lazy" width="600" height="400">
+          <h3>F1 Hybrid Sponge Gourd</h3>
+          <p>Premium sponge gourd seeds delivering consistent, tender fruits.</p>
+        </article>
+
+        <article class="product-card" aria-label="Hybrid maize seeds">
+          <img class="product-image" src="images/hybrid.jpg" alt="Hybrid maize seeds" loading="lazy" width="600" height="400">
+          <h3>Hybrid Maize</h3>
+          <p>High-performance hybrid maize for maximum yield and grain quality.</p>
+        </article>
+
       </div>
     </section>
 
-    <section class="certificate-section">
-      <div class="container certificate-container">
-        <h2 class="section-title">Our Certificate</h2>
+    <!-- Certificate -->
+    <section class="certificate-section" aria-labelledby="cert-heading">
+      <h2 id="cert-heading">Our Certificate</h2>
+      <div class="certificate-container">
         <div class="certificate-content">
-          <img src="images/IMG_20251102_172355.jpg" alt="ISO Certificate" id="certificateThumb">
+          <img src="images/IMG_20251102_172355.jpg" alt="ISO Certificate" id="certificate-img" loading="lazy" width="400" height="280">
           <div>
-            <p>ISO Certified Company – Ensuring Quality & Trust in Every Seed</p>
-            <button class="view-btn" id="openCertificate">View Certificate</button>
+            <p><strong>ISO Certified Company</strong> — Ensuring quality & trust in every seed.</p>
+            <button class="view-btn" id="open-cert">View Certificate</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Modal for certificate -->
-    <div id="certificateModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
-      <div class="modal-inner">
-        <button class="close-btn" id="closeModal">Close</button>
-        <img src="" alt="Certificate large view" id="modalImage">
-      </div>
-    </div>
-
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <h2 class="section-title">Contact Us</h2>
-        <img src="images/IMG-20251031-WA0009.jpg" alt="Sasha Seeds logo" class="contact-logo">
-        <div class="contact-container">
-          <div>
-            <div class="form-header">
-              <h3>Feedback / Contact & Help</h3>
-              <p style="color:var(--muted);margin-top:.25rem">We’d love to hear from you! Fill the form and we will respond shortly.</p>
-            </div>
-
-            <div class="contact-info" style="margin-top:1rem">
-              <p><strong>Email:</strong> sashaseed@rediffmail.com</p>
-              <p><strong>Phone:</strong> +91 9866865381</p>
-              <p style="font-size:.92rem;color:var(--muted)"><strong>Office:</strong> H.no:739/81, Plot No:81, Trimula Colony Welfare Association, Devayamajal, Shamirpet, Hyderabad - 500078</p>
-            </div>
+    <!-- FAQ -->
+    <section id="faq" class="faq-section" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-question" data-toggle="q1">
+            <strong>How do I choose the right seed variety?</strong>
+            <span aria-hidden>+</span>
           </div>
+          <div id="q1" class="faq-answer">Choose based on local climate, soil type, and intended market (fresh or processing). Contact our agronomists for field-specific recommendations.</div>
+        </div>
 
-          <form class="contact-form" id="contactForm" novalidate>
-            <input type="text" id="name" name="name" placeholder="Your Name" required aria-required="true">
-            <input type="email" id="email" name="email" placeholder="Your Email" required aria-required="true">
-            <textarea id="message" name="message" placeholder="Your Message" rows="5" required aria-required="true"></textarea>
-            <button type="submit">Send Message</button>
-          </form>
+        <div class="faq-item">
+          <div class="faq-question" data-toggle="q2">
+            <strong>Do you provide agronomic support?</strong>
+            <span aria-hidden>+</span>
+          </div>
+          <div id="q2" class="faq-answer">Yes — Sasha Seeds offers pre- and post-sale agronomy advice, seed treatment guidelines, and field visits where possible.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" data-toggle="q3">
+            <strong>What packaging sizes are available?</strong>
+            <span aria-hidden>+</span>
+          </div>
+          <div id="q3" class="faq-answer">We offer a range of pack sizes from small packets for demo plots to bulk bags for commercial farmers. Contact sales for custom orders.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" data-toggle="q4">
+            <strong>How do you ensure seed quality?</strong>
+            <span aria-hidden>+</span>
+          </div>
+          <div id="q4" class="faq-answer">All seeds undergo germination testing, purity checks, and are produced under controlled processing with ISO-certified quality systems.</div>
         </div>
       </div>
     </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" aria-labelledby="testi-heading">
+      <h2 id="testi-heading">What Farmers Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial"><strong>Ramesh, Telangana</strong><p>"Sasha Seeds' hybrid maize gave me a 25% higher yield compared to last year."</p></div>
+        <div class="testimonial"><strong>Priya, Maharashtra</strong><p>"Great support and fast delivery. The watermelon variety performed exceptionally."</p></div>
+        <div class="testimonial"><strong>Vikram, Karnataka</strong><p>"Seed quality is consistent. Their team helped with planting schedules and pest advice."</p></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Us</h2>
+      <div class="contact-container">
+        <div>
+          <h3>Get in touch</h3>
+          <p class="contact-info"><strong>Email:</strong> <a href="mailto:sashaseed@rediffmail.com">sashaseed@rediffmail.com</a></p>
+          <p class="contact-info"><strong>Phone:</strong> <a href="tel:+919866865381">+91 9866865381</a></p>
+          <p class="contact-info"><strong>Office:</strong> H.no:739/81, Plot No:81, Trimula Colony, Shamirpet, Hyderabad - 500078</p>
+        </div>
+
+        <form class="contact-form" id="contact-form" aria-label="Contact form">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+          <p id="form-feedback" style="display:none;font-size:0.95rem;color:var(--accent);margin-top:.5rem"></p>
+        </form>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
     <div class="container footer-border">
       <p>🌿 © Sasha Seeds 2025 | All Rights Reserved 🌿</p>
-      <small style="color:var(--muted)">Growing the Future with Quality Seeds</small>
+      <small>Growing the Future with Quality Seeds</small>
     </div>
   </footer>
 
+  <div id="certificate-popup" class="popup" role="dialog" aria-modal="true" aria-hidden="true" style="display:none;align-items:center;justify-content:center;position:fixed;inset:0;background:rgba(3,7,18,0.6);z-index:120;padding:2rem;">
+    <button class="close" id="close-popup" aria-label="Close certificate" style="position:absolute;top:1.25rem;right:1.25rem;background:white;border-radius:999px;padding:.25rem .5rem;cursor:pointer;font-weight:700">✕</button>
+    <img class="popup-content" id="popup-img" alt="Certificate enlarged" style="max-width:90%;max-height:85vh;border-radius:8px;box-shadow:0 10px 40px rgba(2,8,20,0.6)">
+  </div>
+
   <script>
-    // Mobile menu toggle
+    // Certificate popup logic
     (function(){
-      const toggle = document.getElementById('mobileToggle');
-      const menu = document.getElementById('menu');
-      toggle.addEventListener('click', ()=>{
-        const expanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!expanded));
-        menu.style.display = expanded ? 'none' : 'flex';
-        menu.style.flexDirection = 'column';
-        menu.style.gap = '0.5rem';
-      });
+      const openBtn = document.getElementById('open-cert');
+      const popup = document.getElementById('certificate-popup');
+      const popupImg = document.getElementById('popup-img');
+      const certImg = document.getElementById('certificate-img');
+      const closeBtn = document.getElementById('close-popup');
+      if(openBtn && popup && popupImg && certImg){
+        openBtn.addEventListener('click', ()=>{
+          popupImg.src = certImg.src;
+          popup.style.display = 'flex';
+          popup.setAttribute('aria-hidden','false');
+        });
+        closeBtn.addEventListener('click', ()=>{
+          popup.style.display = 'none';
+          popup.setAttribute('aria-hidden','true');
+        });
+        popup.addEventListener('click', (e)=>{ if(e.target === popup) { popup.style.display='none'; popup.setAttribute('aria-hidden','true'); } });
+        document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape'){ popup.style.display='none'; popup.setAttribute('aria-hidden','true'); } });
+      }
     })();
 
-    // Certificate modal
+    // Simple contact form handler (demo)
     (function(){
-      const openBtn = document.getElementById('openCertificate');
-      const modal = document.getElementById('certificateModal');
-      const modalImg = document.getElementById('modalImage');
-      const thumb = document.getElementById('certificateThumb');
-      const closeBtn = document.getElementById('closeModal');
-
-      function openModal(){
-        modalImg.src = thumb.src;
-        modal.style.display = 'flex';
-        modal.setAttribute('aria-hidden','false');
+      const form = document.getElementById('contact-form');
+      const feedback = document.getElementById('form-feedback');
+      if(form){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          feedback.style.display = 'block';
+          feedback.textContent = 'Thanks! Your message has been received. We will contact you soon.';
+          form.reset();
+          setTimeout(()=> feedback.style.display='none', 6000);
+        });
       }
-      function closeModal(){
-        modal.style.display = 'none';
-        modal.setAttribute('aria-hidden','true');
-      }
-
-      openBtn.addEventListener('click', openModal);
-      closeBtn.addEventListener('click', closeModal);
-      modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
-      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
     })();
 
-    // Simple contact form handler (demo) - does not send anything, just validates
+    // FAQ accordion
     (function(){
-      const form = document.getElementById('contactForm');
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-        const name = form.name.value.trim();
-        const email = form.email.value.trim();
-        const message = form.message.value.trim();
-        if(!name || !email || !message){
-          alert('Please fill all fields.');
-          return;
-        }
-        // In production: send via fetch to your server / form endpoint
-        alert('Thanks ' + name + '! Your message has been received.');
-        form.reset();
+      document.querySelectorAll('.faq-question').forEach(q=>{
+        q.addEventListener('click', ()=>{
+          const id = q.getAttribute('data-toggle');
+          const ans = document.getElementById(id);
+          const open = ans.style.display === 'block';
+          // close others
+          document.querySelectorAll('.faq-answer').forEach(a=>a.style.display='none');
+          if(!open) ans.style.display = 'block';
+        });
       });
     })();
   </script>
